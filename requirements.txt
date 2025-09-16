@@ -1,0 +1,12 @@
+langchain_community
+langchainhub
+chromadb
+langchain
+langchain-groq
+pypdf
+langchain-huggingface
+python-docx
+streamlit
+pyngrok
+beautifulsoup4
+lxml
