@@ -14,4 +14,4 @@ transformers
 torch
 sentence-transformer
 faiss-cpu
-upgrade pip
+
