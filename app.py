@@ -51,8 +51,9 @@ if st.button("Run Analysis"):
 
             docs = [Document(page_content=c, metadata={"source":"resume"}) for c in resume_chunks] + \
                    [Document(page_content=d.page_content, metadata={"source":"job"}) for d in job_chunks]
-            vs = Chroma.from_documents(docs, embedding=embed,persist_directory=".chromadb")
-            vs.persist()
+            vs = Chroma.from_documents(docs, embedding=embed,persist_directory=None)
+            
+            
             retriever = vs.as_retriever()
 
             # ATS eval
