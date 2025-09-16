@@ -1,3 +1,5 @@
+https://github.com/user-attachments/assets/64f50a8d-8730-49d6-9ad5-91c82a736ce6
+
 # 📋 JobFit AI: Resume Evaluation & Cold Email Automation
 
 **JobFit AI** is a Streamlit-based web application that helps job seekers analyze their resumes against job postings using ATS (Applicant Tracking System) scoring and generate professional, tailored cold emails for job applications. It leverages LangChain, Groq API, and vector embeddings for intelligent document analysis.
