@@ -3,7 +3,7 @@ from langchain_community.document_loaders import WebBaseLoader
 from pypdf import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.vectorstores import FAISS
+from langchain_community.vectorstores import Chroma
 from langchain.schema import Document
 from langchain.prompts import PromptTemplate
 from groq import Groq
@@ -51,12 +51,7 @@ if st.button("Run Analysis"):
 
             docs = [Document(page_content=c, metadata={"source":"resume"}) for c in resume_chunks] + \
                    [Document(page_content=d.page_content, metadata={"source":"job"}) for d in job_chunks]
-
-            texts = [doc.page_content for doc in docs]
-            
-            vs = FAISS.from_texts(texts, embedding=embed)
-
-            
+            vs = Chroma.from_documents(docs, embedding=embed)
             retriever = vs.as_retriever()
 
             # ATS eval
