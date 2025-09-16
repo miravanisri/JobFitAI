@@ -10,3 +10,6 @@ streamlit
 pyngrok
 beautifulsoup4
 lxml
+transformers
+torch
+sentence-transformers
